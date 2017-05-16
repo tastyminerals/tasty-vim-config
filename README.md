@@ -8,7 +8,7 @@ mv .vim ~/.vim
 mv .vimrc ~/.vimrc
 ```
 
-This will create `tasty-vim-config/.vim`, `.vimrc`, `.gitmodules` in your dir.
-Init and download vim plugins repos.
+This will create **tasty-vim-config/.vim**, **.vimrc**, **.gitmodules** in your dir.
+Init and download vim plugin repos.
 
 
