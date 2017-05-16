@@ -1,0 +1,44 @@
+[submodule "auto-pairs"]
+	path = .vim/bundle/auto-pairs
+	url = git://github.com/jiangmiao/auto-pairs.git
+
+[submodule "ctrlp.vim"]
+    path = .vim/bundle/ctrlp.vim
+    url = git://github.com/ctrlpvim/ctrlp.vim.git
+
+[submodule "jedi-vim"]
+    path = .vim/bundle/jedi-vim
+    url = git://github.com/davidhalter/jedi-vim.git
+
+[submodule "nerdtree"]
+    path = .vim/bundle/nerdtree
+    url = git://github.com/scrooloose/nerdtree.git
+
+[submodule "syntastic"]
+    path = .vim/bundle/syntastic
+    url = git://github.com/scrooloose/syntastic.git
+
+[submodule "tagbar"]
+    path = .vim/bundle/tagbar
+    url = git://github.com/majutsushi/tagbar.git
+
+[submodule "vim-airline"]
+    path = .vim/bundle/vim-airline
+    url = git://github.com/vim-airline/vim-airline.git
+
+[submodule "vim-colorschemes"]
+    path = .vim/bundle/vim-colorschemes
+    url = git://github.com/flazz/vim-colorschemes.git
+
+[submodule "vim-indent-guides"]
+    path = .vim/bundle/vim-indent-guides
+    url = git://github.com/flazz/vim-indent-guides.git
+
+[submodule "vim-surround"]
+    path = .vim/bundle/vim-surround
+    url = git://github.com/flazz/vim-surround.git
+
+[submodule "YouCompleteMe"]
+    path = .vim/bundle/YouCompleteMe
+    url = git://github.com/Valloric/YouCompleteMe.git
+
