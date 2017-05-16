@@ -1,7 +1,7 @@
 # Installation
 
 ```bash
-git clone https://github.com/tastyminerals/tasty-vim-config.git`
+git clone https://github.com/tastyminerals/tasty-vim-config.git
 git submodule init
 git submodule update
 mv .vim ~/.vim
