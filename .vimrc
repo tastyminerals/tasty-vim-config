@@ -1,9 +1,21 @@
-" init pathogen plugin manager
-execute pathogen#infect()
-execute pathogen#helptags()
-
-syntax on
 filetype plugin indent on
+syntax on
+
+" ------[Vim config]------
+
+set encoding=utf-8
+set fileencoding=utf-8
+
+" allow backspace in Windows OS
+"set backspace=2
+"set backspace=indent,eol,start
+
+" show line numbers
+set number
+
+" show relative line numbers
+set relativenumber
+set hlsearch
 
 " show existing tab with 4 spaces width
 set tabstop=4
@@ -12,59 +24,33 @@ set shiftwidth=4
 " on pressing tab, insert 4 spaces
 set expandtab
 
-" Remove toolbars and scrollbars
-set guioptions-=r " Scrollbars
-set guioptions-=T " Toolbar
-set guioptions-=m " Menubar
+" set line width border
+set colorcolumn=110
+
+" Remove toolbars and scrollbars, toolbar, menubar
+set guioptions-=r " scrollbars
+set guioptions-=T " toolbar
+set guioptions-=m " menubar
+set splitbelow " split window is positioned at bottom
 
 " Enable line numbers, curosorline and set colorscheme
-set number
 set hlsearch
-"set cursorline
-colorscheme Chasing_Logic
+set cursorline
 
-"indent-guides plugin
-let g:indent_guides_auto_colors = 1
+"set background=dark
+"favourite themes: nighted, nordisk, sacredforest, papaya, solarized
+colorscheme nighted " no gui theme (for vim)
+
+" configure vim gui (gvim) 
+if has("gui_running")
+	colorscheme nighted
+	set lines=60 columns=100 linespace=0
+    set guifont=Iosevka\ 13
+    " set guifont=Consolas\ 12
+endif
 
 " Reload .vimrc when saved it
 au BufWritePost .vimrc so %
-
-" set gui font
-if has("gui_running")
-	set guioptions-=T " no toolbar
-	colorscheme atom
-	set lines=60 columns=150 linespace=0
-	set guifont=Inconsolata\ 14
-endif	
-
-" NERDTreeToggle hotkey
-map <C-n> :NERDTreeToggle<CR>
-
-" TagBar hotkey
-nmap <C-\> :TagbarToggle<CR>
-
-" Syntastic checker config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" init syntax checkers
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_lua_checkers = ["luac","luacheck"]
-
-" vim-airline persistent
-set laststatus=2
-
-" ctrlp config
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-map <C-b> :CtrlP<CR>
-"let g:ctrlp_map = "<c-b>"
-"let g:ctrlp_map = "CtrlP"
-let g:ctrlp_working_path_mode = 'c'
 
 " switch among buffers with CTRL
 map <C-[> :bnext<CR>
@@ -89,6 +75,83 @@ set wrap!
 " show the number of selected lines in VISUAL mode
 set showcmd
 
+" set wildmenu (autocompletion for ':' vim command line mode)
+set wildmenu
+set wildmode=longest:list,full
+
+
+" ------[Utils config]------
+" prettify xml files
+map <C-A-x> :%!xmllint --format -<CR>
+
+" prettify json files
+map <C-A-j> :%!python -m json.tool<CR>
+
+" prettify file columns
+map <C-A-t> :%!column -t<CR>
+
+
+" ------[Plugins config]------
+
+" vim-indent-guides
+"let g:indent_guides_auto_colors=1
+" enable indent guides shading
+"autocmd VimEnter * :IndentGuidesEnable
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" TagBar (requires ctags)
+nmap <C-\> :TagbarToggle<CR>
+" disable abc sort for the tagbar
+let g:tagbar_sort = 0
+
+" Syntastic
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+" init syntax checkers
+"let g:syntastic_python_python_exec = '/usr/bin/python'
+"let g:syntastic_python_checkers = ["flake8", "pylint", "python"]
+"let g:syntastic_lua_checkers = ["luac","luacheck"]
+"let g:syntastic_d_checkers = ["dscanner"]
+
+" ctrlp
+set runtimepath^=~/.vim/pack/tasty/start/ctrlp.vim
+map <C-b> :CtrlP<CR>
+let g:ctrlp_working_path_mode = 'c'
+
 " enables YCM completion for C-family languages
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+" let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+" let g:ycm_path_to_python_interpreter = '/usr/bin/python'
+
+" NERDCommenter
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 0
+" Set a language to use its alternate delimiters by default
+"let g:NERDAltDelims_java = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" dutyl
+"let g:dutyl_stdImportPaths=['C:\D\dmd2\windows\bin']
+" Prevent VIM from opening a console window every time a command needs to run 
+let g:dutyl_dontUseVimProc=1
+
+" vimcompletesme 
+" let g:vcm_default_maps=0 
+" imap <C-Space> <Plug>vim_completes_me_forward
+
+" vim_current_word
+imap <C-H> <Plug>VimCurrentWordToggle
+" twins of word under cursor:
+"let g:vim_current_word#highlight_twins = 1
+" the word under cursor:
+"let g:vim_current_word#highlight_current_word = 1
 

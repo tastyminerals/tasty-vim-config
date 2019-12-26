@@ -1,36 +1,31 @@
-[submodule ".vim/bundle"]
-	path = .vim/bundle
+[submodule ".vim/pack/tasty/start/auto-pairs"]
+	path = .vim/pack/tasty/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule ".vim/bundle/auto-pairs"]
-	path = .vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
+[submodule ".vim/pack/tasty/start/ctrlp.vim"]
+	path = .vim/pack/tasty/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule ".vim/bundle/jedi-vim"]
-	path = .vim/bundle/jedi-vim
-	url = https://github.com/davidhalter/jedi-vim.git
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule ".vim/pack/tasty/start/nerdtree"]
+	path = .vim/pack/tasty/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
+[submodule ".vim/pack/tasty/start/nerdcommenter"]
+	path = .vim/pack/tasty/start/nerdcommenter
+	url = https://github.com/ddollar/nerdcommenter
+[submodule ".vim/pack/tasty/start/tagbar"]
+	path = .vim/pack/tasty/start/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/bundle/vim-airline"]
-	path = .vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/bundle/vim-colorschemes"]
-	path = .vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
-[submodule ".vim/bundle/vim-indent-guides"]
-	path = .vim/bundle/vim-indent-guides
+[submodule ".vim/pack/tasty/start/vim-indent-guides"]
+	path = .vim/pack/tasty/start/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".vim/pack/tasty/start/vim_current_word"]
+	path = .vim/pack/tasty/start/vim_current_word
+	url = https://github.com/dominikduda/vim_current_word
+[submodule ".vim/pack/tasty/start/syntastic"]
+	path = .vim/pack/tasty/start/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/pack/tasty/start/vim-dutyl"]
+	path = .vim/pack/tasty/start/vim-dutyl
+	url = https://github.com/idanarye/vim-dutyl.git
+[submodule ".vim/pack/tasty/start/nighted.vim"]
+	path = .vim/pack/tasty/start/nighted.vim
+	url = https://github.com/wolf-dog/nighted.vim
+
